@@ -1,36 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	/*
-		fmt.Println("Input Data :")
-		var input float64
-		fmt.Scanf("%f", &input)
-		fmt.Println("Input Data is :", input)
-	*/
-	for i := 0; i <= 10; i++ {
-		if i%2 == 0 {
-			fmt.Println(i, "is even ")
-		} else {
-			fmt.Println(i, "is odd ")
-		}
+	data := variadicFunc(1, 2, 3, 4, 5, 6, 7, 10)
+	fmt.Println(data)
+}
+
+func variadicFunc(datas ...int) int {
+	total := 0
+	for _, round := range datas {
+		total += round
 	}
-
-	/*
-		switch input {
-			case 0:
-				fmt.Println("This is 0")
-			case 1:
-				fmt.Println("This is 1")
-			default:
-				fmt.Println("No case")
-			} */
-	/* if input > 10 {
-		fmt.Println("More than 10")
-	} else {
-		fmt.Println("Less than 10 ")
-	} */
-
-	// fmt.Println("Hello world")
+	return total
 }
