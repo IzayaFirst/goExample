@@ -3,11 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	var data string = "Hello world"
-	data2 := "Hello world"
-	interger := 200
-	fmt.Println(data)
-	fmt.Println(data2)
-	fmt.Println(interger)
+	fmt.Println("Input Data :")
+	var input float64
+	fmt.Scanf("%f", &input)
+	fmt.Println("Input Data is :", input)
 	// fmt.Println("Hello world")
 }
